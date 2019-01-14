@@ -21,28 +21,28 @@ if ($(window).width() >= 1200) {
 	});
 }
 
-//function isLoggedIn() {
-//	let isIE = /*@cc_on!@*/false || !!document.documentMode;
-//	if (isIE) {
-//	
-//		let decodedCookie = decodeURIComponent(document.cookie);
-//		let ca = decodedCookie.split(';');
-//		let loggedIn = false;
-//		for(let i = 0; i < ca.length; i++) {
-//			if (ca[i].includes('sessionid=')) {
-//				loggedIn = true;
-//			}
-//		}
-//		let loc = location.pathname;
-//		if (!(loc === '/booking/') && !(loc === '/portal/')) {
-//			if (!loggedIn) {
-//				document.getElementById('login-btn').innerHTML = '<a href="https://impactexpress.co.uk/portal/?method=login">Login</a>';
-//			} else if (loggedIn) {
-//				document.getElementById('login-btn').innerHTML = '<a href="https://impactexpress.co.uk/portal/">Portal</a>';
-//			}
-//		}
-//	}
-//}
+// function isLoggedIn() {
+//     var isIE = /*@cc_on!@*/false || !!document.documentMode;
+//     if (isIE) {
+
+//         var decodedCookie = decodeURIComponent(document.cookie);
+//         var ca = decodedCookie.split(';');
+//         var loggedIn = false;
+//         for (var i = 0; i < ca.length; i++) {
+//             if (ca[i].indexOf('sessionid=') !== -1) {
+//                 loggedIn = true;
+//             }
+//         }
+//         var loc = location.pathname;
+//         if (!(loc === '/booking/') && !(loc === '/portal/')) {
+//             if (!loggedIn) {
+//                 document.getElementById('login-btn').innerHTML = '<a href="https://impactexpress.co.uk/portal/?method=login">Login</a>';
+//             } else if (loggedIn) {
+//                 document.getElementById('login-btn').innerHTML = '<a href="https://impactexpress.co.uk/portal/">Portal</a>';
+//             }
+//         }
+//     }
+// }
 
 function scrollTo(selector) {
     $('body').animate({
