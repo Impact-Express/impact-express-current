@@ -432,9 +432,13 @@ form .wpcf7-submit {
  *  International Page  *
  ************************/
 
-#international-banner-img{
+#international-banner-img {
     margin-bottom: 25px;
     margin-top: 85px;
+}
+
+#international-banner-img img {
+    width: 100%;
 }
 
 #main-navigation {
@@ -755,7 +759,7 @@ form .wpcf7-submit {
         display: none;
     }
 
-    .quick-quote {
+    .quick-quote-int {
         width: 380px;
         float:left;
     }

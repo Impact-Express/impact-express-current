@@ -1,4 +1,4 @@
-<div class="quick-quote">
+<div class="quick-quote quick-quote-int">
     <div class="quick-quote-box">
         <div class="row">
             <h2>Get an Instant Quote</h2>
