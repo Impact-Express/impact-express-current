@@ -1171,8 +1171,27 @@ form .form-actions .b-register:before {
     margin: 0;
 }
 
+.quick-quote .col {
+    display: inline-block;
+}
+
+.quick-quote .country-select {
+    margin-right: 20px;
+}
+.quick-quote .weight-select {
+    margin-top: 10px;
+}
+
+.quick-quote .country-select select {
+    height: 30px;
+}
+
+.quick-quote .weight-select input {
+    height: 30px;
+}
+
 .quick-quote-box {
-    margin: 1em 0 1em 2em;
+    /* margin: 1em 0 1em 2em; */
     padding: 0.5em 2em;
     border: 1px solid #999;
     background-color: aliceblue;
