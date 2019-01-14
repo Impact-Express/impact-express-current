@@ -390,25 +390,33 @@ form .wpcf7-submit {
 }
 
 .country .quick-quote-box {
-    /* margin: 0 0 28px 0; */
-    /* padding: 0.5em 2em; */
     background-color: aliceblue;
 }
 
-/* .country-image img {
-    width: 100%;
-} */
+.get-price {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.book-now {
+    margin-top: 10px;
+}
+
+.country-quote {
+    width: 320px;
+}
 
 .international-banner {
     width: 100%;
     height: 500px;
-    background: #FECE00;
+    /* background: #FECE00; */
     justify-content: center;
     padding: 40px 0;
 }
 
 .international-banner-image img {
-    width: 50%;
+    width: 65%;
+    height: 374px;
 }
 
 .country-box {
@@ -427,10 +435,6 @@ form .wpcf7-submit {
 #international-banner-img{
     margin-bottom: 25px;
     margin-top: 85px;
-}
-
-#international-banner-img img{
-    width: 100%;
 }
 
 #main-navigation {
@@ -743,6 +747,15 @@ form .wpcf7-submit {
 
 @media screen and (max-width: 1199px) {
 
+    .international-banner-image img {
+        display: none;
+    }
+
+    .quick-quote {
+        width: 380px;
+        float:left;
+    }
+
     #country-grid .col-md-4 {
         margin: 10px;
         width: 100%;
@@ -848,6 +861,13 @@ form .wpcf7-submit {
 
     #main-content .service-block {
         position: static;
+    }
+
+    .country-quote {
+        width: 100%;
+    }
+    .quick-quote {
+        width:100%;
     }
 }
 

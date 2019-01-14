@@ -1,4 +1,4 @@
-<div class="quick-quote col-xs-12 col-sm-12 col-md-6 col-lg-6">
+<div class="quick-quote">
     <div class="quick-quote-box">
         <div class="row">
             <h2>Get an Instant Quote</h2>
@@ -31,9 +31,9 @@
                 </p>
             </div>
             <div class="row">
-                <button type="submit" id="qq-submit-p8q2mp" class="btn btn-default btn-lg">Get price</button>
-                <button type="submit" id="qq-book-now" class="btn btn-default btn-lg">Book Now</button>
-                <p>&nbsp;<br>Today's price<span id="qq-text-p8q2mp"> for 1 kg of non-documents shipped to USA</span>: <b>£<span id="qq-price-p8q2mp">22.59</span></b></p>
+                <button type="submit" id="qq-submit-p8q2mp" class="btn btn-default btn-lg get-price">Get price</button>
+                <button type="submit" id="qq-book-now" class="btn btn-default btn-lg book-now">Book Now</button>
+                <p class="country-quote">&nbsp;<br>Today's price<span id="qq-text-p8q2mp"> for 1 kg of non-documents shipped to USA</span>: <b>£<span id="qq-price-p8q2mp">22.59</span></b></p>
             </div>
 
             <?php
