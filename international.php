@@ -36,25 +36,20 @@ the_post(); ?>
                         </ul>
                     </div>
                 <?php endif; ?>
-
                 <div id="country-top-text">
+                    <br><br>
                     <?php if (get_field('top_text')): ?>
-                    <br>
                         <?= get_field('top_text');?>
                     <?php endif;?>
                 </div>
                 <div id="country-left-text">
                     <?php if (get_field('left_text')): ?>
-                        <br>
                         <?= get_field('left_text'); ?>
-                        <br>
                     <?php endif;?>
                 </div>
                 <div id="country-bottom-text">
                     <?php if (get_field('bottom_text')): ?>
-                        <br>
                         <?= get_field('bottom_text'); ?>
-                        <br>
                     <?php endif;?>
                 </div>
             </div>

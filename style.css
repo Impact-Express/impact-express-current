@@ -408,10 +408,10 @@ form .wpcf7-submit {
 
 .international-banner {
     width: 100%;
-    height: 500px;
+    height: 420px;
     /* background: #FECE00; */
     justify-content: center;
-    padding: 40px 0;
+    padding-top: 40px;
 }
 
 .international-banner-image img {
@@ -425,7 +425,7 @@ form .wpcf7-submit {
 
 #country-left-text {
     display: inline-block;
-    width: 50%;
+    width: 100%;
 }
 
 /************************ 
@@ -746,6 +746,10 @@ form .wpcf7-submit {
 }
 
 @media screen and (max-width: 1199px) {
+
+    .international-banner {
+        height: 480px;
+    }
 
     .international-banner-image img {
         display: none;
