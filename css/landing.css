@@ -57,6 +57,79 @@ img {
     width: 12em !important;
 }
 
+/* -- Custom panel CSS -- */
+.panel-surcharge-dropdown-parent {
+    border: none;
+    padding: 6px;
+    font-weight: 800;
+    font-size: 18px;
+    width: 1137px;
+    margin-top: 3px;
+    text-transform: uppercase;
+    background-color: #fece00;
+}
+.panel-surcharge-dropdown {
+    border: none;
+    padding: 6px;
+    font-weight: 800;
+    font-size: 16px;
+    width: 1137px;
+    margin-top: 3px;
+    text-transform: uppercase;
+    background-color: #d6d6d6;
+}
+a {
+    color: inherit;
+}
+.pull-right {
+    padding-top: 5px;
+}
+.pull-left {
+    padding-top: 5px;
+}
+.label {
+    top: 0 !important;
+}
+
+/* Parent Panels for SLA Page */
+.panel-head .accordion-toggle.collapse.in:after {
+    /* symbol for "opening" panels */
+    color:#000;
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3s  ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    float: right;
+}
+.panel-head .accordion-toggle.collapsed:after {
+    content: '\f063';
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+}
+
+/* Child Panels for SLA Page */
+.accordion-toggle:after {
+    color:#000;
+    content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    text-decoration: none;
+    transition: .3s  ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    float: right;
+}
+.accordion-toggle.collapsed:after {
+    content: '\f063';
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+} 
+
 /* [S] Bootstrap */
 
 .btn-default {

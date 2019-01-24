@@ -19,7 +19,7 @@
                 </div>
                 <div class="col weight-select">
                         <label for="qq-weight-p8q2mp">Weight [kg]:</label><br>
-                        <input type="number" id="qq-weight-p8q2mp" min="0.5" max="1000" step="0.5" value="1" required="" class="">
+                        <input type="number" id="qq-weight-p8q2mp" min="0.5" max="1000" step="0.5" value="0.5" required="" class="">
                 </div>
             </div>
             <div class="row">
@@ -33,7 +33,7 @@
             <div class="row">
                 <button type="submit" id="qq-submit-p8q2mp" class="btn btn-default btn-lg get-price">Get price</button>
                 <button type="submit" id="qq-book-now" class="btn btn-default btn-lg book-now">Book Now</button>
-                <p class="country-quote">&nbsp;<br>Today's price<span id="qq-text-p8q2mp"> for 1 kg of non-documents shipped to USA</span>: <b>£<span id="qq-price-p8q2mp">22.59</span></b></p>
+                <p class="country-quote">&nbsp;<br><br>&nbsp;DHL Express: <b>£<span id="qq-price-p8q2mp">20.87</span></b></p>
             </div>
 
             <?php
@@ -64,6 +64,9 @@
                         $country = 'Portugal*';
                         break;
                 }
+                if ($country = 'International Shipping Destinations') {
+                    $country = 'USA';
+                }
             ?>
             <script>
                 $(function () {
@@ -92,7 +95,7 @@
                         }
                     }
                     $('#qq-deliver-to-p8q2mp').val('<?= $country ?>');
-                    $('#qq-weight-p8q2mp').val(parseFloat('') || 1);
+                    $('#qq-weight-p8q2mp').val(parseFloat('') || 0.5);
                     $('#qq-submit-p8q2mp').on("click", function (e) {
                         e.preventDefault();
                         e.stopPropagation();
