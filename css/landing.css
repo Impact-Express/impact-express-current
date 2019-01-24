@@ -1269,6 +1269,21 @@ form .form-actions .b-register:before {
     border: 1px solid #999;
     background-color: aliceblue;
 }
+.q-quote {
+    display: inline;
+    /* margin: 10px; */
+}
+#q-row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#q-col {
+    display: inline;
+}
 
 /* quick quote - END */
 

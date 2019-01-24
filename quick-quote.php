@@ -23,22 +23,30 @@
                 </div>
             </div>
             <div class="row">
-                <p class="radio">
-                    <label><input type="radio" name="qq-type-p8q2mp" value="docs">Documents</label>
-                </p>
-                <p class="radio">
-                    <label><input type="radio" name="qq-type-p8q2mp" value="non_docs" checked="">Non-documents</label>
-                </p>
+                <div class="col">
+                    <p class="radio">
+                        <label><input type="radio" name="qq-type-p8q2mp" value="docs">Documents</label>
+                    </p>
+                    <p class="radio">
+                        <label><input type="radio" name="qq-type-p8q2mp" value="non_docs" checked="">Non-documents</label>
+                    </p>    
+                </div>
+                <div class="col gp-col">    
+                    <button type="submit" id="qq-submit-p8q2mp" class="btn btn-default btn-lg get-price">Get price</button>
+                </div>
             </div>
-            <div class="row">
-                <button type="submit" id="qq-submit-p8q2mp" class="btn btn-default btn-lg get-price">Get price</button>
-                <button type="submit" id="qq-book-now" class="btn btn-default btn-lg book-now">Book Now</button>
-                <p class="country-quote">&nbsp;<br><br>&nbsp;DHL Express: <b>£<span id="qq-price-p8q2mp">20.87</span></b></p>
+            <div id="q-row" class="row" style="text-align:center;">
+                <div style="float:left;" class="dhl-express q-quote col"><img src="https://impactexpress.co.uk/wp-content/themes/impact-express-current/images/services-dhl.png" alt="DHL Express"></div>
+                <div class="country-quote col" style="width:26%;">
+                    <div class="row q-quote" style="font-size:12px;">Express Delivery from</div>
+                    <div class="row q-quote"><b>£<span id="qq-price-p8q2mp">20.87</span></b></div>
+                </div>
+                <button  style="float:right;" type="submit" id="qq-book-now" class="col q-quote btn btn-default btn-lg book-now">Book Now</button>
             </div>
-
             <?php
                 $country = ucwords(str_replace('-',' ',get_post_field('post_name', get_post())));
                 switch ($country) {
+                    case 'International Shipping Destinations':
                     case 'Usa':
                         $country = 'USA';
                         break;
@@ -63,9 +71,6 @@
                     case 'Portugal':
                         $country = 'Portugal*';
                         break;
-                }
-                if ($country = 'International Shipping Destinations') {
-                    $country = 'USA';
                 }
             ?>
             <script>

@@ -4,7 +4,7 @@ the_post();
 <main id="main-content">
     <div class="international-banner">
         <div class="container international-banner-image">
-            <img src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">
+            <img class="banner-image" src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">
             <?php get_template_part('quick-quote'); ?>
         </div>
     </div>

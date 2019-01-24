@@ -398,6 +398,10 @@ form .wpcf7-submit {
     margin-top: 10px;
 }
 
+.gp-col {
+    float: right;
+}
+
 .book-now {
     margin-top: 10px;
 }
@@ -414,7 +418,7 @@ form .wpcf7-submit {
     padding-top: 40px;
 }
 
-.international-banner-image img {
+.international-banner-image .banner-image {
     width: 65%;
     height: 374px;
 }
@@ -755,7 +759,7 @@ form .wpcf7-submit {
         height: 480px;
     }
 
-    .international-banner-image img {
+    .international-banner-image .banner-image {
         display: none;
     }
 
@@ -853,6 +857,10 @@ form .wpcf7-submit {
 
     .mobile-menu {
         display: block;
+    }
+
+    .gp-col {
+        float: left;
     }
 }
 
