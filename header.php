@@ -63,7 +63,11 @@ src="https://www.facebook.com/tr?id=414237339116988&ev=PageView
 <!-- End Facebook Pixel Code -->
 </head>
 <body <?php body_class(); ?>>
- 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB9CB6J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <!-- [S] #main-navigation -->
     <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top slim">
         <div class="container">
