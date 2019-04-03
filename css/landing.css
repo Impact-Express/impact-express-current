@@ -63,7 +63,7 @@ img {
     padding: 6px;
     font-weight: 800;
     font-size: 18px;
-    width: 1137px;
+    width: 100%;
     margin-top: 3px;
     text-transform: uppercase;
     background-color: #fece00;
@@ -73,7 +73,7 @@ img {
     padding: 6px;
     font-weight: 800;
     font-size: 16px;
-    width: 1137px;
+    width: 100%;
     margin-top: 3px;
     text-transform: uppercase;
     background-color: #d6d6d6;

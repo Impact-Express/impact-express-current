@@ -101,7 +101,7 @@
     <!-- [S] #twitter -->
     <section id="twitter">
         <div class="container spacing">
-            <h2><a href="https://twitter.com/impactexpress"><i class="fab fa-twitter"></i></a></h2>
+            <h2><a href="https://twitter.com/impactexpress" target="_blank"><i class="fab fa-twitter"></i></a></h2>
             <p class="twitter-text"><?= Twitter::latestTweet(); ?></p>
             <a href="https://twitter.com/impactexpress" class="btn btn-inversed btn-lg b-twitter-follow" target="_blank">Follow Us</a>
         </div>

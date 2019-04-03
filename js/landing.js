@@ -125,7 +125,7 @@ function CookieBar() {
     };
     this.setCookie = function (name, value) {
         d = new Date();
-		d.setTime(d.getTime() + 2628003000);
+		d.setTime(d.getTime() + 31540000);
 		nmString = d.toUTCString();
         document.cookie = name + "=" + value + "; expires=" + nmString;
     }

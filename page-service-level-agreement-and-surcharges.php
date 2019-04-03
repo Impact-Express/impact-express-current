@@ -1,10 +1,9 @@
-<?php
+<?php get_header();
 /*
  * Template Name: Service Level Agreement and Surcharges
  */
-get_header(); ?>
+?>
     <section id="services" class="services">
-
         <div class="container" style="text-align: left;">
             <div class="service-image">
                 <img src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">
@@ -26,11 +25,10 @@ get_header(); ?>
             </div>
             <br>
             <div class="level-content">
-                <h2>SERVICE LEVEL AGREEMENT AND SHIPMENT SURCHARGE INFORMATION – EFFECTIVE 1ST JAN 2019</h2>
+                <h2><b><?php the_title() ?> Information | Effective 1st Jan 2019</b></h2>
                 <div class="panel-group" id="accordion">
-
                     <!-- Optional Services Panel -->
-                    <div class="panel panel-light">
+                        <div class="panel panel-light">
                         <div class="panel-head">
                             <h4 class="panel-title">
                                 <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#OptionServices">
@@ -40,15 +38,18 @@ get_header(); ?>
                         </div>
                         <div id="OptionServices" class="panel-collapse collapse">
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#9AMDelivery" aria-controls="9AMDelivery">
-                            Special Delivery by 09:00
+                                Special Delivery by 09:00
                             </button>
                             <div id="9AMDelivery" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Available for delivery to selected postcodes within the Worldwide by 0900 on the next available working day (by 1030 to
-                                    USA). Please check the delivery postcode before booking at dct.dhl.com
+                                    <?php if (get_field('pre0900_special')): ?>
+                                        <?= get_field('pre0900_special');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: Tariff + £20.00
+                                    <?php if (get_field('pre0900_special_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('pre0900_special_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#Pre12Delivery" aria-controls="Pre12Delivery">
@@ -56,11 +57,14 @@ get_header(); ?>
                             </button>
                             <div id="Pre12Delivery" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Available for delivery to selected postcodes within the Worldwide by 1200 on the next available working day. Please
-                                    check the delivery postcode before booking at dct.dhl.com
+                                    <?php if (get_field('pre1200_special')): ?>
+                                        <?= get_field('pre1200_special');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: Tariff + £10.00
+                                    <?php if (get_field('pre1200_special_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('pre1200_special_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#SatDelivery" aria-controls="SatDelivery">
@@ -68,33 +72,37 @@ get_header(); ?>
                             </button>
                             <div id="SatDelivery" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The delivery of a shipment on a Saturday, when Saturday is not a standard working day, or on a Friday, when Friday is
-                                    not a standard working day. This service is only available in selected postal / zip code areas. Please check the delivery
-                                    postcode before booking at dct.dhl.com
+                                    <?php if (get_field('saturday_special_delivery')): ?>
+                                        <?= get_field('saturday_special_delivery');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £45.00
+                                    <?php if (get_field('saturday_special_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('saturday_special_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#Insurance" aria-controls="Insurance">
-                                Shipment Insurance - Charged by Shipment Value
+                                Shipment Insurance --<br> Charged by Shipment Value
                             </button>
                             <div id="Insurance" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The provision, at individual shipment level, of declared value coverage above Standard Liability for the amount
-                                    necessary to repair or replace a shipment in the event of physical loss or damage
+                                    <?php if (get_field('shipment_insurance')): ?>
+                                        <?= get_field('shipment_insurance');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Percentage of replacement / declared value with : £18.00 or 3% of stated shipment value if higher.
+                                    <?php if (get_field('shipment_insurance_footer')): ?>
+                                        Percentage of replacement / declared value with: £<?= get_field('shipment_insurance_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--/-->
-
+                    <!--END-->
 
                     <!-- Surcharges Panel -->
-                    <div class="panel panel-light">
+                        <div class="panel panel-light">
                         <div class="panel-head">
                             <h4 class="panel-title">
                                 <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#SurchargeCollapse">
@@ -102,31 +110,36 @@ get_header(); ?>
                                 </a>
                             </h4>
                         </div>
-                    <div id="SurchargeCollapse" class="panel-collapse collapse">
-                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#FuelSurcharge" aria-controls="FuelSurcharge">
-                                Fuel Surcharge
-                            </button>
+                        <div id="SurchargeCollapse" class="panel-collapse collapse">
+                        <button class="btn panel-surcharge-dropdown collapsed" data-toggle="collapse" data-target="#FuelSurcharge" aria-controls="FuelSurcharge">
+                            Fuel Surcharge <span class="accordion-toggle collapsed"></span>
+                        </button>
                             <div id="FuelSurcharge" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    A variable percentage surcharge, derived from a publicly available jet fuel index or diesel fuel index, which is applied to
-                                    the weight charge, Service Premiums and all Surcharges and Optional Service charges.
-                                </div>
-                                <div class="panel-footer text-info">
-                                    Price Per Shipment: Calculated Monthly and posted at <a href="https://impactexpress.co.uk/information/monthly-fuel-surcharge/">impactexpress.co.uk/information/monthly-fuel-surcharge/</a>
-                                </div>
+                            <div class="panel-body">
+                                <?php if (get_field('fuel_surcharge')): ?>
+                                    <?= get_field('fuel_surcharge');?>
+                                <?php endif;?>
                             </div>
+                            <div class="panel-footer text-info">
+                                <?php if (get_field('fuel_surcharge_footer')): ?>
+                                    Price Per Shipment: <?= get_field('fuel_surcharge_footer');?>
+                                    <a href="<?= the_field('fuel_surcharge_footer_link');?>"><?= the_field('fuel_surcharge_footer_link');?></a>
+                                <?php endif;?>
+                            </div>
+                        </div>
                         <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#RemoteDelivery" aria-controls="RemoteDelivery">
                                 Remote Area Delivery
                         </button>
                             <div id="RemoteDelivery" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    An international remote area delivery or collection is defined by a post code (or town in the absence of post code) that is
-                                    determined as dif cult to serve or too distant. Applies to the destination address for exports, the origin address for
-                                    imports and both the origin and destination addresses for Third Country shipments. To check if Remote Area Service
-                                    applies to a post code or town name, please visit the Capability Tool (DCT) at dct.dhl.com
+                                    <?php if (get_field('remote_area_delivery')): ?>
+                                        <?= get_field('remote_area_delivery');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Weight (Amount Per Kg), Min Amount Per Shipment: £0.38 per kg, subject to a minimum charge of £19.00 per shipment.
+                                    <?php if (get_field('remote_area_delivery_footer')): ?>
+                                        Weight (Amount Per Kg), Min Amount Per Shipment:  £<?= get_field('remote_area_delivery_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                         <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#DataEntry" aria-controls="DataEntry">
@@ -134,33 +147,56 @@ get_header(); ?>
                         </button>
                             <div id="DataEntry" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    A surcharge applies for each shipment consigned with non-electronic, paper based manual house waybills not entered
-                                    onto our online booking facility/with a pre alert manifest sent prior to shipment arrival or without EDI transmitted
-                                    information being receieved prior to arrival. Login information is available on request.
+                                    <?php if (get_field('data_entry_surcharge')): ?>
+                                        <?= get_field('data_entry_surcharge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £2.00
+                                    <?php if (get_field('data_entry_surcharge_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('data_entry_surcharge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                         <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#Insurance2" aria-controls="Insurance2">
-                            Shipment Insurance - Charged by Shipment Value
+                            Shipment Insurance <br> Charged by Shipment Value
                         </button>
-                        <div id="Insurance2" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                The provision, at individual shipment level, of declared value coverage above Standard Liability for the amount
-                                necessary to repair or replace a shipment in the event of physical loss or damage
+                            <div id="Insurance2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <?php if (get_field('shipment_insurance')): ?>
+                                        <br>
+                                        <?= get_field('shipment_insurance');?>
+                                    <?php endif;?>
+                                </div>
+                                <div class="panel-footer text-info">
+                                    <?php if (get_field('shipment_insurance_footer')): ?>
+                                        <br>
+                                        Percentage of replacement / declared value with: £<?= get_field('shipment_insurance_footer');?>
+                                    <?php endif;?>
+                                </div>
                             </div>
-                            <div class="panel-footer text-info">
-                                Percentage of replacement / declared value with : £18.00 or 3% of stated shipment value if higher.
+                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#AddrCorrection" aria-controls="AddrCorrection">
+                                Address Correction
+                            </button>
+                            <div id="AddrCorrection" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <?php if (get_field('address_correction')): ?>
+                                        <br>
+                                        <?= get_field('address_correction');?>
+                                    <?php endif;?>
+                                </div>
+                                <div class="panel-footer text-info">
+                                    <?php if (get_field('address_correction_footer')): ?>
+                                        <br>
+                                        Per Shipment: £<?= get_field('address_correction_footer');?>
+                                    <?php endif;?>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
-                    <!--/-->
-
+                    <!--END-->
 
                     <!-- Additional Handling Panel -->
-                    <div class="panel panel-light">
+                        <div class="panel panel-light">
                         <div class="panel-head">
                             <h4 class="panel-title">
                                 <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#HandlingCollapse">
@@ -169,17 +205,19 @@ get_header(); ?>
                             </h4>
                         </div>
                         <div id="HandlingCollapse" class="panel-collapse collapse">
-
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#Oversize" aria-controls="Oversize">
                                 Oversize Piece Surcharge
                             </button>
                             <div id="Oversize" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    This fixed surcharge applies to every piece, including a pallet, that exceeds the scale weight of 70kg or with a single
-                                    dimension in excess of 120cm. The Oversize Piece surcharge applies to domestic and international shipments.
+                                    <?php if (get_field('oversize_charge')): ?>
+                                        <?= get_field('oversize_charge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Piece: £70.00
+                                    <?php if (get_field('oversize_charge_footer')): ?>
+                                        Price Per <b>**PIECE**</b>: £<?= get_field('oversize_charge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#NonStackablePallet" aria-controls="NonStackablePallet">
@@ -187,213 +225,241 @@ get_header(); ?>
                             </button>
                             <div id="NonStackablePallet" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    This fixed surcharge is applied to every pallet within a shipment that cannot be stacked, either on request by the
-                                    shipper, or because of its shape, content or packaging. This surcharge applies to domestic and international shipments.
+                                    <?php if (get_field('nonstack_charge')): ?>
+                                        <?= get_field('nonstack_charge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                   Price Per Piece: £130.00
+                                    <?php if (get_field('nonstack_charge_footer')): ?>
+                                        Price Per <b>**PIECE**</b>: £<?= get_field('nonstack_charge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!--/-->
-
+                    <!--END-->
 
                     <!-- DG Surcharges Panel -->
-                    <div class="panel panel-light">
+                        <div class="panel panel-light">
                         <div class="panel-head">
                             <h4 class="panel-title">
                                 <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#DGCollapse">
-                                    Dangerous Goods Surcharges --- Please check with dg@impactexpress.co.uk prior to booking
+                                    Dangerous Goods
                                 </a>
                             </h4>
                         </div>
                         <div id="DGCollapse" class="panel-collapse collapse">
+                            <h4 class="text-center">***--- Please check with dg@impactexpress.co.uk prior to booking ---***</h4>
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#FullDG" aria-controls="FullDG">
                                 Full Dangerous Goods
                             </button>
                             <div id="FullDG" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The handling and transportation of substances and commodities classified as Full Dangerous Goods either on our
-                                    suppliers air or road network or on commercial airlines. Comprises Full IATA Dangerous Goods to the limits of ADR
-                                    (Accord Dangerous Routier) Limited Quantities (LQ).
+                                    <?php if (get_field('fulldg_charge')): ?>
+                                        <?= get_field('fulldg_charge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £85.00
+                                    <?php if (get_field('fulldg_charge_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('fulldg_charge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#LithiumBatteries-4" aria-controls="LithiumBatteries-4">
-                               Lithium Batteries --- Up to 4 items per Consignment
+                               Lithium Batteries<br> Up to 4 items per Consignment
                             </button>
                             <div id="LithiumBatteries-4" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    You may send a maximum of 4 items containing a battery per consignment, each item containing a battery and must be
-                                    contained within the item (phone/Laptop)they are intended to power and packed in the original box. Maximum of 2
-                                    boxes per consignment each containing 2 x seperately boxed items containing lithium batteries allowed. Please check
-                                    with dg@impactexpress.co.uk to confirm packing instructions and country regulations prior to booking.
+                                    <?php if (get_field('lithium_batteries_up_to_4')): ?>
+                                        <?= get_field('lithium_batteries_up_to_4');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: Standard Tariff
+                                    <?php if (get_field('lithium_batteries_up_to_4_footer')): ?>
+                                        Price Per Shipment: <?= get_field('lithium_batteries_up_to_4_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#LithiumBatteries4plus" aria-controls="LithiumBatteries4plus">
-                                Lithium Batteries --- More than 4 items per Consignment
+                                Lithium Batteries <br> More than 4 items per <br>Consignment
                             </button>
                             <div id="LithiumBatteries4plus" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    You may send more than 4 items containing a battery but they must still be contained within the item
-                                    (phone/Laptop)they are intended to power and packed in the original box. They can be packed all within one or more
-                                    box per consignment. Please check with dg@impactexpress.co.uk to confirm packing instructions and country
-                                    regulations prior to booking.
+                                    <?php if (get_field('LithiumBatteries_4plus_charge')): ?>
+                                        <?= get_field('LithiumBatteries_4plus_charge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £20.00
+                                    <?php if (get_field('LithiumBatteries_4plus_charge_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('LithiumBatteries_4plus_charge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#LithiumBatteriesSecII" aria-controls="LithiumBatteriesSecII">
-                                Lithium Batteries --- IATA Section II (PI967, 969, 970)
+                                Lithium Batteries <br> IATA Section II (PI967, 969, 970)
                             </button>
+
                             <div id="LithiumBatteriesSecII" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The handling and transportation of shipments containing Lithium Ion or Lithium Metal batteries compliant with the
-                                    appropriate IATA Packing instructions (PI966 or 969) either on our suppliers air or road networks or on commerical
-                                    airlines.
+                                    <?php if (get_field('Li-IonSecII_charge')): ?>
+                                        <?= get_field('Li-IonSecII_charge');?>
+                                    <?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £20.00
+                                    <?php if (get_field('Li-IonSecII_charge_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('Li-IonSecII_charge_footer');?>
+                                    <?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#LithiumBatteriesSec1BII" aria-controls="LithiumBatteriesSec1BII">
-                                Lithium Batteries --- IATA Section 1B, II (PI965, PI968)
+                                Lithium Batteries <br> IATA Section 1B, II (PI965, PI968)
                             </button>
                             <div id="LithiumBatteriesSec1BII" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The handling and transportation of shipments containing loose Lithium Ion Batteries compliant with the appropriate
-                                    IATA Packing Instructions (PI965) on the DHL air network.
+									<?php if (get_field('Li-IonSec1BII_charge')): ?>
+										<?= get_field('Li-IonSec1BII_charge');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £85.00
+									<?php if (get_field('Li-IonSec1BII_charge_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('Li-IonSec1BII_charge_footer');?>
+									<?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#DGinEQ" aria-controls="DGinEQ">
-                                Dangerous Goods in Excepted Quantities
+                                Dangerous Goods in <br>Excepted Quantities
                             </button>
                             <div id="DGinEQ" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The handling and transportation of substances and commodities classified as Excepted Quantities in accordance with the
-                                    IATA Dangerous Goods Regulations (DGR) and permitted on passenger aircrafts or in accordance with ADR (Accord Dangerous Routier) when transported by road.
+									<?php if (get_field('DG_in_EQ')): ?>
+										<?= get_field('DG_in_EQ');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £10.00
+									<?php if (get_field('DG_in_EQ_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('DG_in_EQ_footer');?>
+									<?php endif;?>
                                 </div>
                             </div>
 
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#DGLimitedQuantities" aria-controls="DGLimitedQuantities">
-                                Dangerous Goods in Limited Quantities By Road
+                                Dangerous Goods in <br>Limited Quantities By Road
                             </button>
                             <div id="DGLimitedQuantities" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The ground handling and transportation of substances and commodities classified as Limited Quantities to the limits of
-                                    ADR (Accord Dangerous Routier) that are prohibited for air transportation.
+									<?php if (get_field('DG_in_LQ')): ?>
+										<?= get_field('DG_in_LQ');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £32.00
+									<?php if (get_field('DG_in_LQ_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('DG_in_LQ_footer');?>
+									<?php endif;?>
                                 </div>
                             </div>
-
                             <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#DryIce" aria-controls="DryIce">
                                 Dry Ice UN1845
                             </button>
                             <div id="DryIce" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    The provision, handling and transportation of Dry Ice (UN1845) used as a cooling agent for non-dangerous goods on
-                                    either the DHL air or road network or on commercial airlines. Can include replenishment during transit.
+									<?php if (get_field('UN1845_Dry_Ice')): ?>
+										<?= get_field('UN1845_Dry_Ice');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £16.00
+									<?php if (get_field('UN1845_Dry_Ice_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('UN1845_Dry_Ice_footer');?>
+									<?php endif;?>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!--/-->
-
+            <!--END-->
 
                     <!-- Security Charges Panel -->
-                    <div class="panel panel-light">
+                        <div class="panel panel-light">
                         <div class="panel-head">
                             <h4 class="panel-title">
-                                <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <a class="btn panel-surcharge-dropdown-parent accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#Securitycollapse">
                                    Security Charges
                                 </a>
                             </h4>
                         </div>
-                        <div id="collapseThree" class="panel-collapse collapse">
+                        <div id="Securitycollapse" class="panel-collapse collapse">
 
-                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#RestrictedDest" aria-controls="RestrictedDest">
-                               <span class="pull-left label label-primary">NEW</span> Restricted Destination Surcharge
+                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed"
+                                    data-toggle="collapse" data-target="#RestrictedDest"
+                                    aria-controls="RestrictedDest">
+                                Restricted Destination Surcharge
                             </button>
                             <div id="RestrictedDest" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Covers the exceptional handling required to service destinations that are subject to trade restrictions imposed by the
-                                    United Nations Security Council. The charge aplies to outbound non document shipments to Central Africa, Ivory Coast,
-                                    Dem Rep of Congo, Eritrea, Iran, Iraq, North Korea, Libya, Somalia, South Sudan*, Syria* and Yemen.
+									<?php if (get_field('Restricted_Destinations')): ?>
+										<?= get_field('Restricted_Destinations');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £22.00*<br>
-                                    * Both Charges will apply Per Shipment.
+									<?php if (get_field('Restricted_Destinations_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('Restricted_Destinations_footer');?><br>
+                                        * Both Charges will apply Per Shipment.
+									<?php endif;?>
                                 </div>
                             </div>
 
-                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#ElevatedRisk" aria-controls="ElevatedRisk">
-                                <span class="pull-left label label-primary">NEW</span> Elevated Risk Surcharge
+                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#ElevatedRisk"
+                                    aria-controls="ElevatedRisk">
+                                Elevated Risk Surcharge
                             </button>
                             <div id="ElevatedRisk" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Covers additional security measures for handling outbound and inboud shipments in countries that are in continuos
-                                    threat of war, civil unrest or threats of terrorism. The charge is currently in place for outbound, inbound and 3rd country
-                                    shipments for Afghanistan*, Burundi, Iraq*, Libya, Syria*, Mali, Niger and Yemen.
+									<?php if (get_field('Elevated_Risk')): ?>
+										<?= get_field('Elevated_Risk');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £15.00*<br>
-                                    * Both Charges will apply Per Shipment.
+									<?php if (get_field('Elevated_Risk_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('Elevated_Risk_footer');?><br>
+                                        * Both Charges will apply Per Shipment.
+									<?php endif;?>
                                 </div>
                             </div>
 
-                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#ExporterValidation" aria-controls="ExporterValidation">
-                                <span class="pull-left label label-primary">NEW</span> Exporter Validation Surcharge
+                            <button class="btn panel-surcharge-dropdown accordion-toggle collapsed" data-toggle="collapse" data-target="#ExporterValidation"
+                                    aria-controls="ExporterValidation">
+                                Exporter Validation Surcharge
                             </button>
                             <div id="ExporterValidation" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Exporter valdation surcharges apply when shipping to a country that is subject to trade restrictions Per shipment £22.00*
-                                    imposed by anational legislation such as the EEAS or OFAC. The charge is for outbound non-docs only to *Both charges will apply per shipment
-                                    Afghanistan*, South Sudan, Belarus, Myanmar, Zimbabwe and Lebanon.
+									<?php if (get_field('Exporter_Validation')): ?>
+										<?= get_field('Exporter_Validation');?>
+									<?php endif;?>
                                 </div>
                                 <div class="panel-footer text-info">
-                                    Price Per Shipment: £22.00*<br>
-                                    * Both Charges will apply Per Shipment.
+									<?php if (get_field('Exporter_Validation_footer')): ?>
+                                        Price Per Shipment: £<?= get_field('Exporter_Validation_footer');?><br>
+                                        * Both Charges will apply Per Shipment.
+									<?php endif;?>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!--/-->
-
+                    <!--END-->
 
                 </div>
-
-                <br><br>
-
-               <a class="btn panel-surcharge-dropdown-parent btn-default" href="https://impactexpress.co.uk/wp-content/uploads/2019/01/SLA-Surcharges-Information-2019.pdf">
-                                View the Full Copy of the Surcharge Information Here. <i class=" pull-right fa fa-chevron-right"></i>
-               </a>
-                <br><br>
+                <br>
+                    <br>
+                        <a class="btn panel-surcharge-dropdown-parent btn-default"
+                           href="https://impactexpress.co.uk/wp-content/uploads/2019/01/SLA-Surcharges-Information-2019.pdf">
+                            View the Full Copy of the <br>Surcharge Information Here.
+                            <i style="position:relative; bottom:14px;" class="pull-right fa fa-chevron-right"></i>
+                        </a>
+                    <br>
+                <br>
             </div>
         </div>
 </section>

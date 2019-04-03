@@ -17,7 +17,6 @@
 	<a href="/">
 		<img src="<?= get_theme_file_uri('images/navbar-logo.png'); ?>" alt="Impact Express Wholesale Ltd Logo">
 	</a>
-	<h4>Online Booking Portal</h4>
 </div>
 <style type="text/css">
 	#ie-logo {

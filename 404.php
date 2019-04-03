@@ -10,10 +10,10 @@
 	<p>For some reason the page you requested could not be found on our server.</p>
 	<p>Go back to the <a href="javascript:history.go(-1)">previous page</a> or visit our <a href="<?= site_url(); ?>">homepage</a> or try one of the links below:</p>
 	<ul>
-	  <li><a href="services/international-shipping-prices/">International Shipping Prices</a></li>
-	  <li><a href="tracking">Track My Parcel</a></li>
-	  <li><a href="register">Get an Account</a></li>
-	  <li><a href="contact-us">Contact Us</a></li>
+	  <li><a href="https://impactexpress.co.uk/services/international-shipping-destinations/">International Shipping Prices</a></li>
+	  <li><a href="https://impactexpress.co.uk/tracking/">Track My Parcel</a></li>
+	  <li><a href="https://impactexpress.co.uk/portal/?method=login">Get an Account</a></li>
+	  <li><a href="https://impactexpress.co.uk/contact-us/">Contact Us</a></li>
 	</ul>
 
 </section>
