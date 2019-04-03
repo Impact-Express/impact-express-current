@@ -2,13 +2,17 @@
 <!--suppress ALL -->
 <html <?php language_attributes(); ?> class="no-js">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PB9CB6J');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="keywords" content="<?= get_field('keywords'); ?>" />
-
     <meta name="globalsign-domain-verification" content="zxu2jH7OTq3adw7GX3IAM0UZy2ijRFRdCPyIvgbVU_"/>
-
     <link rel="apple-touch-icon" sizes="57x57" href="<?= get_theme_file_uri('images/icons/apple-touch-icon-57x57.png') ?>">
     <link rel="apple-touch-icon" sizes="60x60" href="<?= get_theme_file_uri('images/icons/apple-touch-icon-60x60.png') ?>">
     <link rel="apple-touch-icon" sizes="72x72" href="<?= get_theme_file_uri('images/icons/apple-touch-icon-72x72.png') ?>">    
@@ -22,9 +26,7 @@
     <link rel="icon" type="image/png" href="<?= get_theme_file_uri('images/icons/favicon-96x96.png') ?>" sizes="96x96">
     <link rel="icon" type="image/png" href="<?= get_theme_file_uri('images/icons/favicon-160x160.png') ?>" sizes="160x160">
     <link rel="icon" type="image/png" href="<?= get_theme_file_uri('images/icons/favicon-196x196.png') ?>" sizes="196x196">
-
     <?php wp_head(); ?>
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
