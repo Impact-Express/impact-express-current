@@ -85,30 +85,6 @@
         </div>
     </div>
 </footer>
-
-
-<!-- <script>
-    var google_conversion_id = 984014727;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-</script>
-<script src="//www.googleadservices.com/pagead/conversion.js"></script> -->
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-88886441-1', 'impactexpress.co.uk');
-    ga('send', 'pageview');
-</script>
-
 <?php wp_footer(); ?>
 </body>
 </html>
