@@ -19,10 +19,6 @@
         // CSS
         wp_enqueue_style('impact-bootstrap', get_theme_file_uri('/css/bootstrap.min.css'));
         wp_enqueue_style('impact-landing', get_theme_file_uri('/css/landing.css'));
-        wp_enqueue_style('impact-fa1', get_theme_file_uri('/css/css/fontawesome.css'));
-        wp_enqueue_style('impact-fa2', get_theme_file_uri('/css/css/brands.css'));
-        wp_enqueue_style('impact-fa3', get_theme_file_uri('/css/css/solid.css'));
-        
         wp_enqueue_style('impact-main-style', get_stylesheet_uri());
 
         // JavaScript
