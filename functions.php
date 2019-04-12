@@ -22,7 +22,8 @@
         wp_enqueue_style('impact-main-style', get_stylesheet_uri());
 
         // JavaScript
-        wp_enqueue_script('impact-jquery-javascript', get_theme_file_uri('/js/jquery-1.12.4.min.js'),[],false,true);
+        // wp_deregister_script( 'jquery' );
+        // wp_enqueue_script('impact-jquery-javascript', get_theme_file_uri('/js/jquery-1.12.4.min.js'),[],false,true);
         wp_enqueue_script('impact-bootstrap-javascript', get_theme_file_uri('/js/bootstrap.min.js'),[],false,true);
         wp_enqueue_script('impact-landing-javascript', get_theme_file_uri('/js/landing.js'),[],false,true);
     }

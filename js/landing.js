@@ -1,24 +1,20 @@
-/*jslint browser: true*/
-/*global $, jQuery, alert, console*/
-// var API_URL = 'https://impactexpress.co.uk/ieapi/api';
-// console.dir(window.location);
-// var SET_COOKIE = window.location.protocol + '//' + window.location.hostname + '/ie-direct/setCookies.php';
+(function($) {
 
 // Fix menu scroll issue
 $(".navbar-collapse").css({ maxHeight: $(window).height() - $(".navbar-header").height() + "px" });
 
 // Service panel colour transition
 if ($(window).width() >= 1200) {
-	$(".service-panel").mouseenter(function() {
-		$(this).children('.overlay').css({"background-color":"#edbd00","opacity": 0.9});
-		$(this).find('.btn').css("opacity",1);
-		$(this).find('.service-icon').css("opacity",0);
-	});
-	$(".service-panel").mouseleave(function() {
-		$(this).children('.overlay').css({"background-color":"#2d3332","opacity":0.8});
-		$(this).find('.btn').css("opacity",0);
-		$(this).find('.service-icon').css("opacity",1);
-	});
+    $(".service-panel").mouseenter(function() {
+        $(this).children('.overlay').css({"background-color":"#edbd00","opacity": 0.9});
+        $(this).find('.btn').css("opacity",1);
+        $(this).find('.service-icon').css("opacity",0);
+    });
+    $(".service-panel").mouseleave(function() {
+        $(this).children('.overlay').css({"background-color":"#2d3332","opacity":0.8});
+        $(this).find('.btn').css("opacity",0);
+        $(this).find('.service-icon').css("opacity",1);
+    });
 }
 
 // function isLoggedIn() {
@@ -61,7 +57,7 @@ function scrollTo(selector) {
         }
         var cookieBar = new CookieBar();
         cookieBar.init();
-		//isLoggedIn();
+        //isLoggedIn();
     });
 }());
 
@@ -125,8 +121,9 @@ function CookieBar() {
     };
     this.setCookie = function (name, value) {
         d = new Date();
-		d.setTime(d.getTime() + 31540000);
-		nmString = d.toUTCString();
+        d.setTime(d.getTime() + 31540000);
+        nmString = d.toUTCString();
         document.cookie = name + "=" + value + "; expires=" + nmString;
     }
 }
+})(jQuery);
