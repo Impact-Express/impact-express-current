@@ -387,7 +387,7 @@ a {
     vertical-align: bottom;
     margin-left: 4px;
     background-color: #444848;
-    color: #606363;
+    color: #fff;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 #main-footer .social-links ul li a:hover {
