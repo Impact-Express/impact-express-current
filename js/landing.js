@@ -125,5 +125,8 @@
             nmString = d.toUTCString();
             document.cookie = name + "=" + value + "; expires=" + nmString;
         }
+
+        
+
     }
     })(jQuery);
