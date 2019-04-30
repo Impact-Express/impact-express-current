@@ -47,7 +47,7 @@
     {
         return array_merge($attributes, array(
             'text'                  => 'Add Piece',
-            'additional_classes'    => 'wpcf7-submit'
+            'additional_classes'    => 'wpcf7-field-group-button'
         ));
     }
     add_filter('wpcf7_field_group_add_button_atts','impact_custom_add_button_atts');
@@ -56,7 +56,7 @@
     {
         return array_merge($attributes, array(
             'text'                  => 'Remove Piece',
-            'additional_classes'    => 'wpcf7-submit'
+            'additional_classes'    => 'wpcf7-field-group-button'
         ));
     }
     add_filter('wpcf7_field_group_remove_button_atts','impact_custom_remove_button_atts');
