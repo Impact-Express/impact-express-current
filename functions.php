@@ -12,26 +12,38 @@
         return '';
     }
     add_filter('the_generator', 'theme_remove_version');
-
+/*
+	function my_init()   
+    {  
+        if (!is_admin())   
+        {  
+            wp_deregister_script('jquery');
+            // Load the copy of jQuery that comes with WordPress  
+            // The last parameter set to TRUE states that it should be loaded  
+            // in the footer.  
+            wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', FALSE, '1.11.0', TRUE);  
+      
+            wp_enqueue_script('jquery');  
+        }  
+    }  
+    add_action('init', 'my_init');
+*/
     function impact_files() {
         // Fonts
         wp_enqueue_style('impact-play', get_theme_file_uri('/fonts/Play.css'));
         // CSS
         wp_enqueue_style('impact-bootstrap', get_theme_file_uri('/css/bootstrap.min.css'));
         wp_enqueue_style('impact-landing', get_theme_file_uri('/css/landing.css'));
-        wp_enqueue_style('impact-fa1', get_theme_file_uri('/css/css/fontawesome.css'));
-        wp_enqueue_style('impact-fa2', get_theme_file_uri('/css/css/brands.css'));
-        wp_enqueue_style('impact-fa3', get_theme_file_uri('/css/css/solid.css'));
-        
         wp_enqueue_style('impact-main-style', get_stylesheet_uri());
 
         // JavaScript
-        wp_enqueue_script('impact-jquery-javascript', get_theme_file_uri('/js/jquery-1.12.4.min.js'));
+        // wp_enqueue_script('impact-jquery-javascript', get_theme_file_uri('/js/jquery-1.12.4.min.js'),[],false,true);
         wp_enqueue_script('impact-bootstrap-javascript', get_theme_file_uri('/js/bootstrap.min.js'),[],false,true);
         wp_enqueue_script('impact-landing-javascript', get_theme_file_uri('/js/landing.js'),[],false,true);
+        wp_enqueue_script('impact-jq', get_theme_file_uri('/js/jquery-1.12.4.min.js'),[],false,false);
     }
-
     add_action('wp_enqueue_scripts', 'impact_files');
+
 
     function impact_features() {
         // Menus

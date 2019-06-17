@@ -4,11 +4,11 @@
 	 */
 	get_header();
 ?>
+
 <div style="width:100%; height:200px;"></div>
-<div class="container">
-<?php the_content(); ?>
-</div>
-</div>
+  <div class="container">
+    <?php the_content(); ?>
+  </div>
 </div>
 <div style="width:100%; height:120px;"></div>
 <?php get_footer(); ?>
@@ -18,5 +18,3 @@
     border: 1px solid #666869;
 }
 </style>
-</body>
-</html>
