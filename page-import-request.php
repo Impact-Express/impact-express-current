@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Contact Us
+ * Template Name: Import Requests
  */
 get_header();
 
@@ -42,12 +42,3 @@ the_post(); ?>
 <?php //}
 get_footer();
 ?>
-
-
-
-
-
-
-
-
-

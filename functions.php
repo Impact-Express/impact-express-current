@@ -53,3 +53,25 @@
         add_theme_support('title-tag');
     }
     add_action('after_setup_theme', 'impact_features');
+
+    // -- WPCF7 Repeatable Fields Plugin - Add Button -- //
+        function impact_custom_add_button_atts($attributes) 
+    {
+        // -- Change the attributes of the add button. -- //
+        return array_merge($attributes, array(
+            'text'                  => 'Add Piece',
+            'additional_classes'    => 'wpcf7-field-group-button'
+        ));
+    }
+    add_filter('wpcf7_field_group_add_button_atts','impact_custom_add_button_atts');
+
+    // -- WPCF7 Repeatable Fields Plugin - Remove Button -- //
+    function impact_custom_remove_button_atts($attributes) 
+    {
+        // -- Change the attributes of the remove button. -- //
+        return array_merge($attributes, array(
+            'text'                  => 'Remove Piece',
+            'additional_classes'    => 'wpcf7-field-group-button'
+        ));
+    }
+    add_filter('wpcf7_field_group_remove_button_atts','impact_custom_remove_button_atts');
