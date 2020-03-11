@@ -11,7 +11,6 @@ the_post(); ?>
 
     <main id="main-content">
         <section id="services" class="services">
-
             <div class="container" style="text-align: left;">
                 <div class="service-image">
                     <img src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">

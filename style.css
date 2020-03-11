@@ -10,11 +10,14 @@ body {
 img {
     max-width: 100% !important;
 }
+a:hover {
+    color: rgba(77, 77, 77, 0.952);
+    text-decoration: none;
+}
 .lead-text,
 .normal-text {
     text-align: left;
 }
-
 /* courier navigator */
 .icos img {
     margin: 0 7px 7px;
@@ -99,6 +102,8 @@ a {
 }
 .panel-head .accordion-toggle.collapsed:after {
     content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -118,6 +123,8 @@ a {
 }
 .accordion-toggle.collapsed:after {
     content: '\f063';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -125,30 +132,208 @@ a {
 
 /* Center an Image when it does not have the Quick Quote Box. */
 .center-image {
+    padding-top: 25px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Import Requests Page CSS */
-.input-group-imports {
-    width: 10%;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    color: #555;
-    text-align: center;
-    background-color: #eee;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+@media screen and (max-width:767px){
+    .input-group-imports {
+        width: 10%;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    #imports-description {
+        display: block;
+        width: 100%;
+        height: auto !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .wpcf7-field-group-button-plus {
+        font-size: 18px;
+        display: inline-block;
+        padding: 6px 6px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 12px;
+        width: 45%;
+    }
+    .wpcf7-field-group-button-minus {
+        font-size: 18px;
+        display: inline-block;
+        padding: 6px 6px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 40px;
+        margin-top: 5px;
+        margin-left: 14px;
+        width: 45%;
+    }
+    }
 }
+@media screen and (min-width:768px){
+    .input-group-imports {
+        width: 10%;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .input-sm-pieces {
+        width: 10% !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .wpcf7-field-group-button-plus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .wpcf7-field-group-button-minus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    #imports-description {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width:1169px){
+    .input-group-imports {
+        width: 10%;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .input-sm-pieces {
+        width: 15% !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .input-sm {
+        margin-bottom: 5px;
+    }
+    #wpcf7-f2567-p173-o1 {
+        display: flex;
+        margin-left: 41px;
+    }
+    .wpcf7-field-group-button-plus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .wpcf7-field-group-button-minus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .import-request-form {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 25px;
+    }
+    #imports-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #why-import-desc { width: 38.666667%; }
+}
+
 /* Custom WPCF7 Styles for the Imports Page */
 .wpcf7-select {
-    width: 73.3% !important;
+    width: 93.6% !important;
+    box-sizing: content-box;
+    height: 30px !important;
+    color: #999;
+}
+.inline-display {
+    display: inline;
+    color:#999;
+}
+.date-shipmentCollectionDate {
+    display: inline-block;
+    padding-left: 18px;
+    box-sizing: content-box;
 }
 .wpcf7-date {
-    width: 73.6% !important;
+    width: 100% !important;
+    text-align: center;
+    color:#999;
 }
 .wpcf7-text-pieces {
     width: 60% !important;
@@ -165,22 +350,274 @@ a {
     width: 5% !important;
 }
 
-/* WPCF7 Repeatable Fields Button Styling */
-.wpcf7-field-group-button {
-    display: inline-block;
-    position: relative;
+
+/* GET A QUOTE Page Styling */
+.wpcf7-email {
+    float: none !important;
+}
+@media screen and (min-width: 1199px){
+    #get-a-guote-left {
+        border-right: 1px solid rgba(130,130,130,0.5);
+        margin-right: 25px;
+        height: 566px;
+    }
+}
+
+
+/* New Services Page Styling */
+.services-content {
+	padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 45px;
+}
+.seperator {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.16);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16)
+}
+.srv-spacing {
+    padding-top: 45px;
+}
+
+/* Request Consultation Template Part */
+.button-left {
+    float: left !important;
+}
+.req-consultation {
+    background-color: rgb(124, 114, 135);
+    color: #000;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+.vr {
+    border: 1px black solid;
+    height: 310px;
+    width: 0;
+    right: 55px;
+    padding: 0;
+    bottom: 25px;
+}
+.left-side {
+    margin-right: 80px;
+    padding-right: 50px;
+}
+.tel-no {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
     font-size: 18px;
-    padding: 10px 28px;
-    color: #333;
-    text-transform: uppercase;
-    background-color: #fece00;
-    font-weight: bold;
-    border-radius: 6px;
-    border: none;
-    text-decoration: none !important;
-    margin-top: 12px;
-    margin-right: 6px;
-    right: 23px;
+    vertical-align: middle;
+}
+.office-email {
+    display: inline;
+    margin-left: 5px;
+    font-family: play;
+    font-weight: 300;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/** EXPRESS PANEL **/
+.express-delivery-image {
+	float: left;
+}
+.express-delivery-title {
+    float: left;
+    margin-left: 210px;
+}
+.express-delivery-description {
+    float: right;
+    text-align: left;
+    position: relative;
+    top: 20px;
+    left: auto;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 790px;
+    height: 280px;
+}
+
+/** ECONOMY PANEL **/
+.economy-delivery-image {
+	float: right;
+}
+.economy-delivery-title {
+    float: right;
+    margin-right: 210px;
+}
+.economy-delivery-description {
+    float: left;
+    text-align: right;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 790px;
+    height: 280px;
+    top: 20px;
+}
+
+/** IMPORTS PANEL **/
+.imports-image {
+	float: left;
+}
+.imports-title {
+    float: left;
+    text-align: left;
+    margin-left: 210px;
+
+}
+.imports-description {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 790px;
+    height: 280px;
+    top: 20px;
+}
+
+/** UK OVERNIGHT PANEL **/
+.domestic-image {
+	float: right;
+
+}
+.domestic-title {
+    float: right;
+    text-align: right;
+    margin-right: 210px;
+
+}
+.domestic-description {
+    float: left;
+    text-align: right;
+    font-size: 15px;
+    position: relative;
+    box-sizing: content-box;
+    width: 790px;
+    height: 280px;
+    top: 20px;
+}
+
+/** IE TRAX PANEL **/
+.ietrax-image {
+	float: left;
+}
+.ietrax-title {
+    float: left;
+    margin-left: 210px;
+}
+.ietrax-description {
+    float: right;
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    box-sizing: content-box;
+    width: 790px;
+    height: 280px;
+    top: 20px;
+}
+span.wpcf7-not-valid-tip {
+    color: #f00;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+}
+
+    /* WPCF7 Validation Styling for the Send my Parcel Page (Will go in sepeate file as to not mess with the standard*/
+    div.wpcf7-response-output {
+        margin: 2em 0.5em 1em;
+        padding: 12px;
+        right: 160px;
+        border: 2px solid #ff0000;
+        background-color: #f2dede;
+        position: relative;
+        text-align: right;
+        top: 226px;
+        box-sizing: content-box;
+        width: max-content;
+        border-radius: 6px;
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+        right: 130px;
+        border: 2px solid #fff09e;
+        background-color: #fcf8e3;
+        text-align: right;
+        display: inline-block;
+        top: 226px;
+        box-sizing: content-box;
+        width: 380px;
+        border-radius: 6px;
+    }
+ div.wpcf7-mail-sent-ok {
+        right: 130px;
+        background-color: #dff0d8;
+        border: 2px solid #bcccb6;
+        text-align: right;
+        display: inline-block;
+        top: 226px;
+        box-sizing: content-box;
+        width: 380px;
+        border-radius: 6px;
+    }
+    span.wpcf7-not-valid-tip {
+        color: #f00;
+        font-size: 1em;
+        font-weight: normal;
+        display: block;
+    }
+    .use-floating-validation-tip span.wpcf7-not-valid-tip {
+        position: absolute;
+        float: right;
+        left: 375px;
+        top: 7px;
+        z-index: 100;
+        border: 2px solid #ff0000;
+        background: #ffebeb;
+        padding: .2em .8em;
+        box-sizing: content-box;
+        width: max-content;
+    }
+    div.wpcf7 .ajax-loader {
+        visibility: hidden;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: none;
+        padding: 0;
+        margin: 0 0 0 4px;
+        vertical-align: middle;
+        position: relative;
+        top: 255px;
+        right: 130px;
+    }
+    .wpcf7-display-none {
+        display: none;
+    }
+
+/* Send My Parcel Styling */
+.form_send-my-parcel {
+    height: 750px;
+}
+.wpcf7-email {
+    float: none !important;
+}
+@media screen and (min-width: 1199px){
+    #send-my-parcel-left {
+        border-right: 1px solid rgba(130,130,130,0.5);
+        margin-right: 25px;
+        height: 1010px;
+    }
+    #send-my-parcel-right {
+        height: 750px;
+    }
+    #wpcf7-f2728-p2726-o1 {
+        height: 810px;
+    }
 }
 
 
@@ -1757,16 +2194,10 @@ form .form-actions .b-register:before {
     text-decoration: none;
     display: block;
 }
-.dropdown-content ul {
-    list-style-type: none;
-}
-.dropdown-content .dropdown-submenu-content {
-    padding-left: 0;
-}
+.dropdown-content ul {list-style-type: none;}
+.dropdown-content .dropdown-submenu-content {padding-left: 0;}
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #D3D0CB;
-}
+.dropdown-content a:hover {background-color: #D3D0CB;}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -1877,74 +2308,80 @@ form .form-actions .b-register:before {
     text-align: center;
     background-color: #D3D0CB;
 }
-#crazy {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    height: 468px;
-}
-.paving {
-    display: inline-block;
-    position: absolute;
-    border: 2px solid white;
-    overflow: hidden;
-}
-.paving img {
-    width: 100%;
-    height: 100%;
-}
-#pave-1 {
-    width: 228px;
-    height: 228px;
-}
-#pave-2 {
-    width: 456px;
-    height: 228px;
-    left: 228px;
-}
-#pave-3 {
-    width: 456px;
-    height: 114px;
-    left: 684px;
+/** Old Paving CSS
+    #crazy {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        height: 468px;
+    }
+    .paving {
+        display: inline-block;
+        position: absolute;
+        border: 2px solid white;
+        overflow: hidden;
+    }
+    .paving img {
+        width: 100%;
+        height: 100%;
+    }
+    #pave-1 {
+        width: 228px;
+        height: 228px;
+    }
+    #pave-2 {
+        width: 456px;
+        height: 228px;
+        left: 228px;
+    }
+    #pave-3 {
+        width: 456px;
+        height: 114px;
+        left: 684px;
 
-}
-#pave-4 {
-    width: 114px;
-    height: 114px;
-    left: 684px;
-    top: 114px;
-}
-#pave-5 {
-    width: 351px;
-    height: 228px;
-    top: 228px;
-}
-#pave-6 {
-    width: 456px;
-    height: 228px;
-    top: 228px;
-    left: 342px;
-}
-#pave-7 {
-    width: 342px;
-    height: 342px;
-    top: 114px;
-    left: 798px;
-}
-.paving img{
-    transition: transform .5s;
-    width: 100%;
-}
-.paving img:hover{
-    transform:scale(1.1);
-    -ms-transform:scale(1.1);
-    -moz-transform:scale(1.1);
-    -webkit-transform:scale(1.1);
-    -o-transform:scale(1.1);
-}
+    }
+    #pave-4 {
+        width: 114px;
+        height: 114px;
+        left: 684px;
+        top: 114px;
+    }
+    #pave-5 {
+        width: 351px;
+        height: 228px;
+        top: 228px;
+    }
+    #pave-6 {
+        width: 456px;
+        height: 228px;
+        top: 228px;
+        left: 342px;
+    }
+    #pave-7 {
+        width: 342px;
+        height: 342px;
+        top: 114px;
+        left: 798px;
+    }
+    .paving img{
+        transition: transform .5s;
+        width: 100%;
+    }
+    .paving img:hover{
+        transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -moz-transform:scale(1.1);
+        -webkit-transform:scale(1.1);
+        -o-transform:scale(1.1);
+    }
+
+ **/
+
+
 /********************************************
  *   Overridden styles for Contact Form 7   *
  ********************************************/
+
 /** CONTACT FORM 7 OVERRIDES **/
 form .wpcf7 label {
     width: 100%;
@@ -1988,9 +2425,7 @@ form .wpcf7-submit {
     border: none;
 }
 
-/******************* 
- *  Country Pages  *
- *******************/
+/**  Country Pages  **/
 #country-grid {
     margin-bottom: 25px;
 }
@@ -2833,6 +3268,7 @@ form .wpcf7-submit {
     border-radius: 6px;
     border: none;
 }
+form .wpcf7-submit-margintop10 {margin-top: 10px;}
 
 
 /******************* 
@@ -2849,6 +3285,18 @@ form .wpcf7-submit {
 .country-text {
     padding: 28px;
     font-size: 17px;
+}
+
+.top-country-text {
+    padding: 28px;
+    font-size: 15px;
+    display: inline-block;
+    width: 940px;
+    padding-top: 0px;
+    position: relative;
+    margin-top: 0px;
+    top: 20px;
+}
 }
 
 #country-grid .col-md-4 {
@@ -2905,7 +3353,6 @@ form .wpcf7-submit {
 .international-banner {
     width: 100%;
     height: 420px;
-    /* background: #FECE00; */
     justify-content: center;
     padding-top: 40px;
 }
@@ -2913,6 +3360,21 @@ form .wpcf7-submit {
 .international-banner-image .banner-image {
     width: 65%;
     height: 374px;
+}
+
+.international-top-banner {
+    width: 100%;
+    height: 270px;
+    justify-content: center;
+    padding-top: 0;
+}
+.international-top-banner-image {
+    padding-left: 100px;
+}
+.international-top-banner-image .top-banner-image {
+    width: auto;
+    height: auto;
+    padding-bottom: 65px;
 }
 
 .country-box {
@@ -3223,6 +3685,154 @@ form .wpcf7-submit {
     margin-bottom: 10px;
 }
 
+/* Blog Widget Styles */
+.widget {
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+.widget_search {
+    
+}
+.widget_calendar {
+    width: 100%;
+    height: 400px;
+}
+.widget_categories {
+    
+}
+.widget_recent_entries {
+    
+}
+.post_thumb_img {
+    padding-top: 15px;
+}
+.btn-previous_next {
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: ease-in-out 0.2s;
+    background-color: #b3b3b3;
+}
+.btn-previous_next:hover, .btn-previous_next:active {
+    transition: ease-in-out 0.2s;
+    background-color: #e1e1e1;
+}
+
+h2 {
+    margin-top: 5px;
+    font-size: 25px;
+}
+.screen-reader-text {
+display: none;
+}
+#today {
+    background-color: #a3a3a3;
+}
+#wp-calendar {
+    width: 75%;
+    height: 350px;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, caption{
+    text-align: center;
+}
+thead {
+    border: 1px solid #a3a3a3;
+}
+tr td {
+    border: 1px solid #a3a3a3;
+}
+tfoot tr td {
+    border: none;
+}
+
+
+.postform {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+label {
+    display: block;
+}
+#s {
+    display: inline-block;
+    width: 84%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#searchsubmit {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: ease-in-out 0.2s;
+    background-color: #b3b3b3;
+}
+#searchsubmit:hover, #searchsubmit:active {
+    transition: ease-in-out 0.2s;
+    background-color: #e1e1e1;
+}
+
+/* Single post page Styles */
+.main-content {
+    margin-top: 60px;
+}
+.post-image{
+    margin: auto;
+    width: fit-content;
+}
+.post-image img{
+    width: 800px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.is-centered .col-md-8 {
+    margin: auto;
+}
+
+.is-centered {
+    width: fit-content;
+    margin: auto;
+}
+.posts-title {
+    margin-top: 50px;
+}
+.post-content {
+    margin-top: 95px;
+}
+.nothing-found {
+	    margin-top: 90px;
+}
 @media screen and (max-width: 1715px) {
 
     #main-content .service-block {
@@ -3326,7 +3936,6 @@ form .wpcf7-submit {
 }
 
 @media screen and (max-width: 767px) {
-
     form .wpcf7-email{
         float: left;
         width: 100%;
@@ -3392,4 +4001,4 @@ form .wpcf7-submit {
     #main-content .service-block {
         position: static;
     }
-} */
+}

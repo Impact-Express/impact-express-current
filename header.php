@@ -61,6 +61,9 @@ src="https://www.facebook.com/tr?id=414237339116988&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<!-- Font Awesome 5 kit -->
+<script src="https://kit.fontawesome.com/084eb9d694.js" crossorigin="anonymous"></script>
+<!-- End Font Awesome 5 Kit -->
 </head>
 <body <?php body_class(); ?>>
     <!-- Google Tag Manager (noscript) -->
@@ -70,21 +73,26 @@ src="https://www.facebook.com/tr?id=414237339116988&ev=PageView
     
     <!-- [S] #main-navigation -->
     <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top slim">
-        <div class="container">
+        <div class="container-fluid" style="padding-right: 45px; padding-left: 45px;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php bloginfo('home'); ?>">ImpactExpress</a>
+                <a class="navbar-brand" href="<?= site_url('/'); ?>">ImpactExpress</a>
             </div>
             <div class="collapse navbar-collapse" id="main-navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Get Account -->
                     <li class="nav-get-account">
-                        <a href="<?= site_url('/portal/?method=login'); ?>">Send a Parcel</a>
-                        <!-- <a href="https://impact-online.couriernavigator.com/createAccount.html">Get an Account</a> -->
+                        <a href="<?= site_url('/get-a-quote'); ?>">Get a Quote</a>
+                        <!-- <a href="https://impact-online.couriernavigator.com/get-a-quote">Get a Quote</a> -->
+                    </li>
+                    <!-- Send -->
+                    <li>
+                        <a href="<?= site_url('/send-my-parcel'); ?>">Send My Parcel</a>
+                        <!-- <a href="http://impact.couriernavigator.com/send-my-parcel">Send My Parcel</a> -->
                     </li>
                     <!-- Track -->
                     <li>
@@ -103,9 +111,10 @@ src="https://www.facebook.com/tr?id=414237339116988&ev=PageView
                             ?>
                         </div>
                     </li>
+
                     <!-- News -->
                     <li class="dropdown">
-                        <a href="/information">Info</a>
+                        <a href="/information">News & Events</a>
                         <div class="dropdown-content">
                             <?php
                                 wp_nav_menu(array(
@@ -115,14 +124,25 @@ src="https://www.facebook.com/tr?id=414237339116988&ev=PageView
                             ?>
                         </div>
                     </li>
+					<!-- Blog -->
+                    <li>
+                        <a href="<?= site_url('/blog'); ?>">Blog</a>
+                    </li>
+                    <!-- Worldwide Destinations -->
+                    <li class="dropdown">
+                            <a href="<?= site_url('/international-shipping-destinations'); ?>">Destinations</a>
+                            <!-- <a href="https://impactexpress.co.uk/services/international-shipping-destinations">Destinations</a> -->
+                    </li>
+
                     <!-- Contact -->
                     <li>
                         <a href="<?= site_url('/contact-us'); ?>">Contact Us</a>
                     </li>
+                    
                     <li class="nav-login" id="login-btn">
                         <a href="<?= site_url('/portal/?method=login'); ?>">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>adwasdwa

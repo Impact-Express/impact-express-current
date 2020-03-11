@@ -27,7 +27,7 @@
                     <div class="col-xs-6">
                         <ul class="list-group footer-links">
                             <li class="list-group-item"><a href="<?= site_url(); ?>">Home</a></li>
-                            <li class="list-group-item"><a href="<?= site_url('/portal/?method=login'); ?>">Get an Account</a></li>
+                            <li class="list-group-item"><a href="<?= site_url('/get-a-quote'); ?>">Get a Quote</a></li>
                             <li class="list-group-item"><a href="<?= site_url('/tracking'); ?>">Track My Parcel</a>
                             </li>
                             <li class="list-group-item"><a href="<?= site_url('/services'); ?>">Services</a></li>

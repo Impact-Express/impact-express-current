@@ -12,7 +12,7 @@
 	<ul>
 	  <li><a href="https://impactexpress.co.uk/services/international-shipping-destinations/">International Shipping Prices</a></li>
 	  <li><a href="https://impactexpress.co.uk/tracking/">Track My Parcel</a></li>
-	  <li><a href="https://impactexpress.co.uk/portal/?method=login">Get an Account</a></li>
+	  <li><a href="/get-a-quote/">Get a Quote</a></li>
 	  <li><a href="https://impactexpress.co.uk/contact-us/">Contact Us</a></li>
 	</ul>
 

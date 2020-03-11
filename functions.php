@@ -31,6 +31,7 @@
         // Menus
         register_nav_menu('header-services-menu', 'Header Services Menu');
         register_nav_menu('header-news-menu', 'Header News Menu');
+        register_nav_menu('header-destinations-menu', 'Header Destinations Menu');
         // Tags
         add_theme_support('title-tag');
     }
@@ -41,8 +42,8 @@
     {
         // -- Change the attributes of the add button. -- //
         return array_merge($attributes, array(
-            'text'                  => 'Add Piece',
-            'additional_classes'    => 'wpcf7-field-group-button'
+            'text'                  => '+',
+            'additional_classes'    => 'wpcf7-field-group-button-plus'
         ));
     }
     add_filter('wpcf7_field_group_add_button_atts','impact_custom_add_button_atts');
@@ -52,8 +53,36 @@
     {
         // -- Change the attributes of the remove button. -- //
         return array_merge($attributes, array(
-            'text'                  => 'Remove Piece',
-            'additional_classes'    => 'wpcf7-field-group-button'
+            'text'                  => '-',
+            'additional_classes'    => 'wpcf7-field-group-button-minus'
         ));
     }
     add_filter('wpcf7_field_group_remove_button_atts','impact_custom_remove_button_atts');
+	
+ // Add Blog Requirements -- Register Sidebar //
+    add_theme_support( 'editor-styles' );
+    add_theme_support( 'menus' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'align-wide' );
+    set_post_thumbnail_size (380, 190);
+
+    function blog_sidebar () {
+        register_sidebar(
+            array(
+                'id' => 'blog_sidebar',
+                'name' => __('Main Blog Sidebar'),
+                'description' => __('All Sidebar Widgets for the Blog Section of the Webside will be shown here.'),
+            )
+        );
+    }
+    function blog_sidebar_search () {
+        register_sidebar(
+            array(
+                'id' => 'blog_sidebar_search',
+                'name' => __('Main Blog Sidebar Search'),
+                'description' => __('The Sidebar Search.'),
+            )
+        );
+    }
+    add_action('widgets_init', 'blog_sidebar');
+    add_action('widgets_init', 'blog_sidebar_search');

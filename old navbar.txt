@@ -1,0 +1,160 @@
+    <nav id="main-navigation" class="navbar navbar-default navbar-fixed-top slim">
+        <div class="container-fluid" style="padding-right: 45px; padding-left: 45px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?= site_url('/'); ?>">ImpactExpress</a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <nav class="nav navbar-nav navbar-static navbar-right">
+                    <!-- Send -->
+                    <li>
+                        <a href="<?= site_url('/send-my-parcel'); ?>">Send My Parcel</a>
+                        <!-- <a href="http://impact.couriernavigator.com/send-my-parcel">Send My Parcel</a> -->
+                    </li>
+                    <!-- Track -->
+                    <li>
+                        <a href="<?= site_url('/tracking'); ?>">Track My Parcel</a>
+                        <!-- <a href="http://impact.couriernavigator.com/tracking">Track My Parcel</a> -->
+                    </li>
+                    <!-- Services -->
+                    <li class="dropdown dropdown-large">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="/services">Shipping</a>
+                        <div class="dropdown-contemt">
+                            <div class="dropdown-menu dropdown-menu-large">
+                                <?php
+                                    wp_nav_menu(array(
+                                        'menu_class' => 'dropdown-submenu-content',
+                                        'theme_location' => 'header-services-menu',
+                                    ));
+                                ?>
+                            </div>
+                        </div>
+
+
+                    </li>
+
+                    <!-- News -->
+                    <li class="dropdown">
+                        <a href="/information">News & Events</a>
+                        <div class="dropdown-content">
+                            <?php
+                                wp_nav_menu(array(
+                                    'menu_class' => 'dropdown-submenu-content',
+                                    'theme_location' => 'header-news-menu',
+                                ));
+                            ?>
+                        </div>
+                    </li>
+
+                    <!-- Worldwide Destinations -->
+                    <!--<li class="dropdown">
+                            <a href="<!?= #site_url('/international-shipping-destinations'); ?>">Destinations</a>
+                    </li>-->
+
+                    <!-- Contact -->
+                    <li>
+                        <a href="<?= site_url('/contact-us'); ?>">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-get-quote" id="login-btn">
+                        <a href="<?= site_url('/get-a-quote'); ?>">Get a Quote</a>
+                    </li>
+
+                    <li class="nav-login" id="login-btn">
+                        <a href="<?= site_url('/portal/?method=login'); ?>">Login</a>
+                    </li>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+        {# <div  class="container-fluid" style="padding-right: 45px; padding-left: 45px;">    <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<?= site_url('/'); ?>">Impact Express</a>
+        </div>
+        
+        
+        <div class="collapse navbar-collapse js-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                    <!-- Track -->
+                    <li>
+                        <a href="<?= site_url('/tracking'); ?>">Track My Parcel</a>
+                        <!-- <a href="http://impact.couriernavigator.com/tracking">Track My Parcel</a> -->
+                    </li>
+                    <!-- Send -->
+                    <li>
+                        <a href="<?= site_url('/send-my-parcel'); ?>">Send My Parcel</a>
+                        <!-- <a href="http://impact.couriernavigator.com/send-my-parcel">Send My Parcel</a> -->
+                    </li>
+                <li class="dropdown dropdown-large">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shipping <b class="caret"></b></a>
+                    <ul class="dropdown-menu dropdown-menu-large row">
+                        <li class="col-sm-6">
+                            <ul>
+                                <li class="dropdown-header">Services</li>
+                                <li><?php
+                                    wp_nav_menu(array(
+                                        'menu_class' => 'dropdown-submenu-content',
+                                        'theme_location' => 'header-services-menu',
+                                    ));
+                                ?></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="col-sm-6">
+                            <ul>
+                                <li class="dropdown-header">
+                                    <a style="color: #428bca !important; width: max-content;" href="<?= site_url('/international-shipping-destinations'); ?>">Shipping Destinations</a>
+                                </li>
+                                <?php
+                                        wp_nav_menu(array(
+                                            'menu_class' => 'dropdown-submenu-content',
+                                            'theme_location' => 'header-destinations-menu',
+                                        ));
+                                ?>
+                                <?php
+                                        wp_nav_menu(array(
+                                            'menu_class' => 'dropdown-submenu-content',
+                                            'theme_location' => 'header-destinations-menu2',
+                                        ));
+                                ?>
+                            </ul>
+                       </li>
+                    </ul>
+                </li>
+                    <!-- News -->
+                    <li class="dropdown">
+                        <a href="/information">News & Events</a>
+                        <div class="dropdown-content">
+                            <?php
+                                wp_nav_menu(array(
+                                    'menu_class' => 'dropdown-submenu-content',
+                                    'theme_location' => 'header-news-menu',
+                                ));
+                            ?>
+                        </div>
+                    </li>
+                    <!-- Contact -->
+                   <li>
+                        <a href="<?= site_url('/contact-us'); ?>">Contact Us</a>
+                    </li>
+                    
+                    <li class="nav-get-quote" id="login-btn">
+                        <a href="<?= site_url('/get-a-quote'); ?>">Get a Quote</a>
+                    </li>
+
+                    <li class="nav-login" id="login-btn">
+                        <a href="<?= site_url('/portal/?method=login'); ?>">Login</a>
+                    </li>
+            </ul>
+        </div>
+    </div> #}

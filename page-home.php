@@ -21,7 +21,7 @@
                             <p>At Impact Express we provide an integrator based wholesale courier services to the logistics industry. We are an extension to your business offering a link to integrators to complete your deliveries with the best in class fully tracked services.</p>
                         </div>
                     </div>
-                    <div class="service-button"><a href="/portal/?method=login" role="button" type="text/html" class="btn btn-inversed">Send a Parcel</a></div>
+                    <div class="service-button"><a href="/get-a-quote/" role="button" type="text/html" class="btn btn-inversed">Get a Quote</a></div>
                 </div>
                 <div class="col-md-4 service-panel panel-2">
                     <div class="overlay"></div>
@@ -34,7 +34,7 @@
                             <p>Our intuitive delivery portal available to all customers, easily compare services and products on offer from Impact Express via our chosen carrier services. You can book shipments, print carrier labels, customs paperwork, manage tracking and deliveries.</p>
                         </div>
                     </div>
-                    <div class="service-button"><a href="/portal/?method=login" role="button" type="text/html" class="btn btn-inversed">Send a Parcel</a></div>
+                    <div class="service-button"><a href="/get-a-quote/" role="button" type="text/html" class="btn btn-inversed">Get a Quote</a></div>
                 </div>
                 <div class="col-md-4 service-panel panel-3">
                     <div class="overlay"></div>

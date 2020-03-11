@@ -41,7 +41,7 @@
                     <div class="row q-quote" style="font-size:12px;">Express Delivery from</div>
                     <div class="row q-quote"><b>£<span id="qq-price-p8q2mp">20.87</span></b></div>
                 </div>
-                <button style="float:right;" type="submit" id="qq-book-now" class="col q-quote btn btn-default btn-lg book-now">Book Now</button>
+                <button style="float:right;" type="submit" id="qq-book-now" class="col q-quote btn btn-default btn-lg book-now">Continue</button>
             </div>
             <?php
                 $country = ucwords(str_replace('-',' ',get_post_field('post_name', get_post())));
@@ -111,7 +111,7 @@
                     $('#qq-book-now').on('click', function(e) {
                         e.preventDefault();
                         e.stopPropagation();
-                        location.href = "http://impactexpress.co.uk/portal/?method=booking";
+                        location.href = "https://impactexpress.co.uk/get-a-quote/";
                     });
                 });
             </script>

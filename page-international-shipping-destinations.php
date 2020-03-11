@@ -2,16 +2,16 @@
 the_post();
 ?>
 <main id="main-content">
-    <div class="international-banner">
-        <div class="container international-banner-image">
-            <img class="banner-image" src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">
-            <?php get_template_part('quick-quote'); ?>
+    <div class="international-top-banner">
+        <div class="container-fluid international-top-banner-image">
+            <img class="top-banner-image" src="<?= get_field('hero_image')['url']; ?>" alt="<?= get_field('hero_image')['alt']; ?>">
+            <div class="row top-country-text">
+            <h3>Delivery Destinations</h3>
+            <?= get_field('page_text'); ?>
+        </div>
         </div>
     </div>
     <div class="container">
-        <div class="row country-text">
-            <?= get_field('page_text'); ?>
-        </div>
         <div id="country-grid">
             <div class="row">
                 <div class="col-md-4 country-box">
@@ -134,6 +134,7 @@ the_post();
             </div>
         </div>
     </div>
+    <?php get_template_part('request-consultation'); ?>
 </main>
 
 <?php get_footer(); ?>

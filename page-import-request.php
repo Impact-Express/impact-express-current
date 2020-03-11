@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Contact Us
+ * Template Name: Import Requests
  */
 get_header();
 
