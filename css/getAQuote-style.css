@@ -1,0 +1,33 @@
+/* GET A QUOTE Page Styling */
+.wpcf7-email {
+    float: none !important;
+}
+@media screen and (min-width: 1199px){
+    #get-a-guote-left {
+        border-right: 1px solid rgba(130,130,130,0.5);
+        margin-right: 25px;
+        padding: 30px;
+        height: 705px;
+    }
+}
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+    position: absolute;
+    float: right;
+    left: 445px;
+    top: 7px;
+    z-index: 100;
+    border: 0px solid #ffffffa6;
+    color: #ff0000;
+    background: #ffffffa6;
+    padding: .2em .8em;
+    box-sizing: content-box;
+    width: max-content;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: 2px solid #fff09e;
+    background-color: #fcf8e3;
+    border-radius: 6px;
+    display: inline-block;
+    position: absolute;
+    top: 566px;
+}

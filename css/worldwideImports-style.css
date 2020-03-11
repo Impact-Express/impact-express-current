@@ -1,0 +1,207 @@
+
+/* Custom WPCF7 Styles for the Imports Page */
+.wpcf7-select {
+    width: 93.8%;
+    box-sizing: content-box;
+    height: 30px !important;
+    color: #999;
+}
+.wpcf7-text {
+    width: 92.8% !important;
+    box-sizing: content-box;
+    height: 30px !important;
+    color: #999;
+}
+.inline-display {
+    display: inline;
+    color:#999;
+}
+.date-shipmentCollectionDate {
+    display: inline-block;
+    padding-left: 18px;
+    box-sizing: content-box;
+}
+.wpcf7-date {
+    width: 100% !important;
+    text-align: center;
+    color:#999;
+}
+#piecesQuantity, #piecesWeight, #piecesLength, #piecesWidth, #piecesHeight {
+    width: 17.3% !important;
+    text-align: center;
+}
+.wpcf7-text-pieces-padding-small {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.wpcf7-text-pieces-padding-large {
+    padding-left: 50px;
+    padding-right: 25px;
+}
+.wpcf7-select-pieces-selector {
+    width: 5% !important;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: 2px solid #fff09e;
+    background-color: #fcf8e3;
+    position: relative;
+    top: -30px;
+    left: -12px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    z-index: 100;
+    border: 0px solid #ffffffa6;
+    color: #ff0000;
+    background: #ffffffa6;
+    padding: .2em .8em;
+    box-sizing: content-box;
+    width: max-content;
+}
+/* Import Requests Page CSS */
+@media screen and (min-width: 500px) {
+    .container {
+        padding-top: 20px;
+    }
+    .center-image {
+        padding-top: 25px;
+        display: block;
+        margin-left: 6px;
+        margin-right: 0;
+        width: 47% !important;
+    }
+}
+@media screen and (min-width: 576px) {
+    .center-image {
+        padding-top: 25px;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100% !important;
+    }
+}
+@media screen and (min-width:768px){
+
+    .input-group-imports {
+        width: 10%;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .input-sm-pieces {
+        width: 10% !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .wpcf7-field-group-button-plus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .wpcf7-field-group-button-minus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    #imports-description {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width:1169px){
+    .input-group-imports {
+        width: 10%;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        color: #555;
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .input-sm-pieces {
+        width: 19% !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .input-sm {
+        margin-bottom: 5px;
+    }
+    #wpcf7-f2567-p173-o1 {
+        display: flex;
+        margin-left: 41px;
+    }
+    .wpcf7-field-group-button-plus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .wpcf7-field-group-button-minus {
+        font-size: 18px;
+        padding: 6px 18px;
+        color: #333;
+        text-transform: uppercase;
+        background-color: #fece00;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        text-decoration: none !important;
+        margin-right: 5px;
+    }
+    .import-request-form {
+        justify-content: space-between;
+        padding-bottom: 25px;
+    }
+    #imports-description {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #why-import-desc { width: 38.666667%; }
+}

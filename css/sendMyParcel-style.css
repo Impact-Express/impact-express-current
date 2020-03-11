@@ -1,0 +1,100 @@
+    /* WPCF7 Validation Styling for the Send my Parcel Page (Will go in sepeate file as to not mess with the standard*/
+    div.wpcf7-response-output {
+        margin: 2em 0.5em 1em;
+        padding: 12px;
+        right: 160px;
+        border: 2px solid #ff0000;
+        background-color: #f2dede;
+        position: relative;
+        text-align: right;
+        top: 226px;
+        box-sizing: content-box;
+        width: max-content;
+        border-radius: 6px;
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+        right: 130px;
+        border: 2px solid #fff09e;
+        background-color: #fcf8e3;
+        text-align: right;
+        display: inline-block;
+        left: -13px;
+        top: -29px;
+        box-sizing: content-box;
+        width: 380px;
+        border-radius: 6px;
+    }
+    div.wpcf7-mail-sent-ok {
+        right: 130px;
+        background-color: #dff0d8;
+        border: 2px solid #bcccb6;
+        text-align: right;
+        display: inline-block;
+        top: 226px;
+        box-sizing: content-box;
+        width: 380px;
+        border-radius: 6px;
+    }
+    span.wpcf7-not-valid-tip {
+        color: #f00;
+        font-size: 1em;
+        font-weight: normal;
+        display: block;
+    }
+    .use-floating-validation-tip span.wpcf7-not-valid-tip {
+        position: absolute;
+        float: right;
+        left: 375px;
+        top: 7px;
+        z-index: 100;
+        border: 0px solid #ffffffa6;
+        color: #ff0000;
+        background: #ffffffa6;
+        padding: .2em .8em;
+        box-sizing: content-box;
+        width: max-content;
+    }
+    div.wpcf7 .ajax-loader {
+        visibility: hidden;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: none;
+        padding: 0;
+        margin: 0 0 0 4px;
+        vertical-align: middle;
+        position: relative;
+        top: 255px;
+        right: 130px;
+    }
+    .wpcf7-display-none {
+        display: none;
+    }
+    .wpcf7-text {
+        width: 100% !important;
+    }
+    .wpcf7-select {
+        width: 96.1%;
+    }
+
+
+/* Send My Parcel Styling */
+.form_send-my-parcel {
+    height: 970px;
+}
+.wpcf7-email {
+    float: none !important;
+}
+@media screen and (min-width: 1199px){
+    #send-my-parcel-left {
+        border-right: 1px solid rgba(130,130,130,0.5);
+        margin-right: 25px;
+        height: 1010px;
+    }
+    #send-my-parcel-right {
+        height: 970px;
+    }
+    #wpcf7-f2728-p2726-o1 {
+        height: 750px;
+    }
+}
